@@ -1,0 +1,7 @@
+{{ $t := mul 1000 (time "2016-05-28T10:30:00.00+10:00").Unix }}
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+{{- $styles := resources.Get "css/output/styles.css" -}}
+<link rel="stylesheet" href="{{ $styles.RelPermalink }}">
