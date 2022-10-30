@@ -1,6 +1,6 @@
 languageCode: 'fr'
 title: Coach à Bordeaux
-baseURL: https://example.net
+baseURL: https://coachbyco.netlify.app
 removePathAccents: true
 
 params:
