@@ -2,8 +2,8 @@
     "main": "index.js",
     "license": "MIT",
     "scripts": {
-        "hugo": "hugo serve --disableFastRender",
-        "hugo:build": "hugo",
+        "hugo": "IP=$(ipconfig getifaddr en0) && hugo serve --disableFastRender --bind=$IP --baseURL=http://$IP:1313",
+        "hugo:build": "hugo --gc --minify",
         "tailwind": "npx tailwindcss -i ./assets/css/styles.css -o ./assets/css/output/styles.css --watch",
         "tailwind:build": "npx tailwindcss -i ./assets/css/styles.css -o ./assets/css/output/styles.css",
         "build": "npm run tailwind:build && npm run hugo:build"

@@ -1,6 +1,59 @@
 {{ define "main" }}
-<article class="text-center">
-    <h1 class="text-5xl">{{ .Title }}</h1>
-    {{ .Content }}
+
+<section class="container pt-32 scroll-mt-24 grid grid-cols-6 md:grid-cols-12 items-center">
+    {{ partial "image" (dict
+        "img" "images/corentin.png"
+        "opt" (dict
+            "size" "400x"
+            "class" "col-span-3 md:col-span-4 mb-12 md:md-0"
+        )
+    )}}
+    <article class="col-span-full md:col-start-6 md:col-end-12 flex flex-col items-start">
+        <h1 class="text-h1 uppercase">{{ .Title }}</h1>
+        <h3 class="text-h3 text-gold-normal mt-1">Musculation, remise en forme</h3>
+        <p class="text-body mt-8">
+            Lorem ipsum dolor sit amet conseguir ale desi paragra phe
+            naro ise ipso facto lore. Lorem ipsum dolor sit amet conseguir ale desi paragra phe naro ise ipso facto lore
+        </p>
+        <a href="#contact" class="text-cta text-gold-normal mt-8 border border-px px-8 py-3">Prendre contact</a>
+    </article>
+</section>
+
+
+<article id="about" class="container relative mt-32 scroll-mt-24 py-12 bg-black-card">
+    <h2 class="text-h2 text-gold-normal">À propos</h2>
+    <p class="text-body mt-8">
+        Diplômé d’un BPGEPS je mets mes compétences de coaching sportif à votre service
+    </p>
+    <p class="text-body mt-8">
+        Passionné par le sport je fais également du Street-workout depuis plusieurs années
+    </p>
+</article>
+
+<section id="services" class="container relative mt-32 scroll-mt-24 py-12">
+    <h2 class="text-h2 text-gold-normal">Prestations</h2>
+    <article>
+        <h3 class="text-h3 mt-10">Accompagnement personnalisé</h3>
+        <p class="text-body pt-2">
+            Lorem ipsum dolor sit amet conseguir ale desi paragra phe
+            naro ise ipso facto lore. Lorem ipsum dolor sit amet conseguir ale desi paragra phe naro ise ipso facto lore
+        </p>
+    </article>
+    <article>
+        <h3 class="text-h3 mt-10">Devenez massif</h3>
+        <p class="text-body pt-2">
+            Lorem ipsum dolor sit amet conseguir ale desi paragra phe
+            naro ise ipso facto lore. Lorem ipsum dolor sit amet conseguir ale desi paragra phe naro ise ipso facto lore
+        </p>
+    </article>
+</section>
+
+<article id="contact" class="container relative mt-32 py-12 mb-24">
+    <h2 class="text-h2 text-gold-normal mb-6">Prendre contact</h2>
+    <a class="text-h3 block py-2" href="tel:{{ .Site.Params.phone }}">{{ .Site.Params.phone }}</a>
+    <a class="text-h3 block py-2" href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a>
+    <div class="flex flex-row py-2">
+
+    </div>
 </article>
 {{ end }}

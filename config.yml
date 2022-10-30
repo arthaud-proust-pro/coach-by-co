@@ -1,15 +1,15 @@
 languageCode: 'fr'
-title: Example site
+title: Coach à Bordeaux
 baseURL: https://example.net
 removePathAccents: true
 
 params:
-  email: contact@example.net
-  phone: "00 00 00 00"
+  email: coachbyco@gmail.com
+  phone: "06 52 98 42 08"
   seo:
-    author: Author Name
-    title: Author Name - Short presentation
-    desc: "Long description with maximum keywords - Author Name"
+    author: Coach by Co
+    title: Coach by Co - Coach sportif à Bordeaux
+    desc: "Coach sportif à Bordeaux"
     url: https://example.net
     hero: /sprites/hero-min.jpg
     logo: /sprites/logo.png
@@ -18,7 +18,15 @@ params:
 
 menu:
   main:
+    - name: À propos
+      pre: about
+      url: "/#about"
+      weight: 1
+    - name: Prestations
+      pre: services
+      url: "/#services"
+      weight: 2
     - name: Contact
       pre: contact
       url: "/#contact"
-      weight: 1
+      weight: 3
