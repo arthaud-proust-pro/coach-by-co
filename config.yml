@@ -9,10 +9,10 @@ params:
   seo:
     author: Coach by Co
     title: Coach by Co - Coach sportif à Bordeaux
-    desc: "Coach sportif à Bordeaux, je t'aide à transformer ton corps et atteindre tes objectifs pour te sentir et vivre sans contrainte."
+    desc: "Coach sportif à Bordeaux, je t'aide à transformer ton corps et atteindre tes objectifs pour te sentir mieux et vivre sans contrainte."
     url: https://coachbyco.netlify.app
     hero: /sprites/hero-min.jpg
-    logo: /sprites/logo.png
+    logo: /sprites/logo-min.png
     links:
       twitter: https://twitter.com/example_account
 
