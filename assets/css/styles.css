@@ -5,6 +5,13 @@
 @tailwind utilities;
 @tailwind variants;
 
+@layer base {
+    :focus-visible {
+        outline: solid theme('colors.gold.hover') 2px;
+        outline-offset: 3px;
+    }
+}
+
 @layer components {
     .text-h1 {
         @apply text-5xl md:text-6xl font-display font-extrabold;
