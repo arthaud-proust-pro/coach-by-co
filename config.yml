@@ -19,12 +19,12 @@ params:
 menu:
   main:
     - name: À propos
-      pre: about
-      url: "/#about"
+      pre: a-propos
+      url: "/#a-propos"
       weight: 1
     - name: Prestations
-      pre: services
-      url: "/#services"
+      pre: prestations
+      url: "/#prestations"
       weight: 2
     - name: Contact
       pre: contact

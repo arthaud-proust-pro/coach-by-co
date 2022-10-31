@@ -1,10 +1,10 @@
 <header class="z-50 sticky top-0 w-full px-4 py-4  max-h-screen flex flex-col"
-        x-data="{isOpen:false}" :class="isOpen ? 'bg-black-card' : 'bg-black-background'">
+        x-data="menu" :class="isOpen ? 'bg-black-card' : 'bg-black-background'">
     <nav class="container flex flex-row justify-between text-cta z-50">
         <a href="/" class="link mr-auto">Coach by Co</a>
 
         {{ with .Site.Menus.main }}
-            <div class="hidden md:flex flex-row gap-6">
+            <div class="hidden md:flex flex-row gap-10">
                 {{ range .ByWeight  }}
                     <a href="{{ .URL | relURL }}" class="link">{{ .Name }}</a>
                 {{ end }}
@@ -12,7 +12,7 @@
         {{ end }}
 
         <div class="block md:hidden">
-            <button @click="isOpen=!isOpen" x-text="isOpen?'Fermer':'Menu'">Menu</button>
+            <button @click="toggleMenu" x-text="isOpen?'Fermer':'Menu'">Menu</button>
         </div>
     </nav>
 
@@ -20,7 +20,7 @@
         <div class="w-full flex-grow h-screen flex-col items-center justify-center gap-10 text-h3"
              :class="isOpen?'flex':'hidden'">
             {{ range .ByWeight  }}
-            <a href="{{ .URL | relURL }}" class="link" @click="isOpen=false">{{ .Name }}</a>
+            <a href="{{ .URL | relURL }}" class="link" @click="closeMenu">{{ .Name }}</a>
             {{ end }}
         </div>
     {{ end }}
