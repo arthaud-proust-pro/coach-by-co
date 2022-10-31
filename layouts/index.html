@@ -15,7 +15,7 @@
             Lorem ipsum dolor sit amet conseguir ale desi paragra phe
             naro ise ipso facto lore. Lorem ipsum dolor sit amet conseguir ale desi paragra phe naro ise ipso facto lore
         </p>
-        <a href="#contact" class="text-cta text-gold-normal mt-8 border border-px px-8 py-3">Prendre contact</a>
+        <a href="#contact" class="btn">Prendre contact</a>
     </article>
 </section>
 
@@ -52,10 +52,10 @@
 </section>
 
 <section id="contact" class="container mt-32 scroll-mt-24 py-12 mb-24  grid grid-cols-6 md:grid-cols-12">
-    <article  class="col-span-full md:col-start-2 md:col-end-10 lg:col-end-8">
+    <article  class="col-span-full md:col-start-2 md:col-end-10 lg:col-end-8 flex flex-col items-start">
         <h2 class="text-h2 text-gold-normal mb-6">Prendre contact</h2>
-        <a class="text-h3 block py-2" href="tel:{{ .Site.Params.phone }}">{{ .Site.Params.phone }}</a>
-        <a class="text-h3 block py-2" href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a>
+        <a class="text-h3 block py-2 link" href="tel:{{ .Site.Params.phone }}">{{ .Site.Params.phone }}</a>
+        <a class="text-h3 block py-2 link" href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a>
         <div class="flex flex-row py-2">
 
         </div>

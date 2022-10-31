@@ -32,4 +32,29 @@
     .text-cta {
         @apply text-xl font-sans font-bold;
     }
+
+    .btn {
+        @apply text-cta text-gold-normal mt-8 border px-8 py-3 relative transition-colors duration-200;
+    }
+    .btn::after {
+        content: '';
+        @apply block absolute bottom-0 left-0 h-0 w-full bg-gold-normal transition-all delay-300 duration-200 mix-blend-difference;
+    }
+    .btn:hover {
+        @apply border-black-background;
+    }
+    .btn:hover::after {
+        @apply h-full bottom-auto top-0;
+    }
+
+    .link {
+        @apply relative;
+    }
+    .link::after {
+        content: '';
+        @apply absolute right-0 bottom-0 h-[1%] w-0 bg-gold-normal transition-all duration-300;
+    }
+    .link:hover::after {
+        @apply w-full right-auto left-0;
+    }
 }
