@@ -1,16 +1,16 @@
 languageCode: 'fr'
-title: Coach à Bordeaux
 baseURL: https://coachbyco.netlify.app
 removePathAccents: true
 
 params:
   email: coachbyco@gmail.com
   phone: "06 52 98 42 08"
+  facebook: "coachbyco"
   seo:
     author: Coach by Co
     title: Coach by Co - Coach sportif à Bordeaux
-    desc: "Coach sportif à Bordeaux"
-    url: https://example.net
+    desc: "Coach sportif à Bordeaux, je t'aide à transformer ton corps et atteindre tes objectifs pour te sentir et vivre sans contrainte."
+    url: https://coachbyco.netlify.app
     hero: /sprites/hero-min.jpg
     logo: /sprites/logo.png
     links:

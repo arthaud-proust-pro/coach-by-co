@@ -54,7 +54,8 @@
         content: '';
         @apply absolute right-0 bottom-0 h-[1%] w-0 bg-gold-normal transition-all duration-300;
     }
-    .link:hover::after {
+    .link:hover::after,
+    a:hover .link::after {
         @apply w-full right-auto left-0;
     }
 }
