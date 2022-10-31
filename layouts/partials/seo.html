@@ -16,7 +16,7 @@
     "@type" "Organization"
     "name" .Site.Params.seo.author
     "url" .Site.Params.seo.url
-    "logo" .Site.Params.seo.logo
+    "logo" (printf "%s%s" .Site.Params.seo.url .Site.Params.seo.logo)
     "address" "Bordeaux"
     "sameAs" $sameAs
     )}}
@@ -41,6 +41,7 @@
 
 <!-- page url -->
 <link rel="canonical" href="{{ .Permalink }}" />
+<meta property="twitter:site" content="{{ .Site.Params.seo.url }}">
 <meta property="twitter:url" content="{{ .Permalink }}">
 <meta property="og:url" content="{{ .Permalink }}" />
 
