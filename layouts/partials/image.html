@@ -8,7 +8,12 @@
                 src="{{ $resized.Permalink }}"
                 height="{{ $resized.Height }}"
                 width="{{ $resized.Width }}"
+
+                {{ if $opt.loading }}
+                loading="{{ $opt.loading }}"
+                {{ else }}
                 loading="lazy"
+                {{ end }}
 
                 {{ if $opt.alt }}
                 alt="{{ $opt.alt }}"
