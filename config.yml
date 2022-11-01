@@ -4,9 +4,18 @@ removePathAccents: true
 
 params:
   contact:
-    whatsapp: "06 52 98 42 08"
-    facebook: "coachbyco"
-    email: coachbyco@gmail.com
+    whatsapp:
+      content: "06 52 98 42 08"
+      prefix: "tel:"
+    facebook:
+      content: "coachbyco"
+      prefix: https://www.facebook.com/
+    instagram:
+      content: "coach_by_co"
+      prefix: https://www.instagram.com/
+    email:
+      content: coachbyco@gmail.com
+      prefix: "mailto:"
   seo:
     author: Coach by Co
     title: Coach by Co - Coach sportif à Bordeaux
