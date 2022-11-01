@@ -14,7 +14,11 @@ params:
     hero: /sprites/hero-min.jpg
     logo: /sprites/logo-min.png
     links:
-      twitter: https://twitter.com/example_account
+      facebook: https://www.facebook.com/coachbyco
+      instagram: https://www.instagram.com/coach_by_co
+      linkedin: https://www.linkedin.com/in/corentin-chevalier-672322253/
+
+taxonomies:
 
 menu:
   main:
@@ -26,7 +30,11 @@ menu:
       pre: prestations
       url: "/#prestations"
       weight: 2
+    - name: Tarification
+      pre: tarification
+      url: "/#tarification"
+      weight: 3
     - name: Contact
       pre: contact
       url: "/#contact"
-      weight: 3
+      weight: 4

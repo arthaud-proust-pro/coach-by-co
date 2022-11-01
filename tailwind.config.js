@@ -9,7 +9,7 @@ module.exports = {
     colors: {
       gold: {
         'normal': '#FEBD59',
-        'hover': '#FEB037',
+        'hover': '#FEBD59',
         'disabled': '#FFD38E',
       },
       white: {
@@ -18,8 +18,9 @@ module.exports = {
         'disabled': '#9B9B9B',
       },
       black: {
-        'background': '#0C0C0C',
-        'card': '#151515',
+        'background': '#000F1A',
+        'card': '#001624',
+        'decoration': '#011C2E',
       },
     },
     fontFamily: {

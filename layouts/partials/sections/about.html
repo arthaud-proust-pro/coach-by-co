@@ -1,0 +1,21 @@
+<section id="a-propos" class="bg-black-card md:bg-black-background container mt-32 scroll-mt-24 py-12 grid grid-cols-6 md:grid-cols-12">
+    <article class="col-span-full md:col-start-1 xl:col-start-2 md:col-end-8 xl:col-end-7 xl:col-end-7">
+        <h2 class="text-h2 text-gold-normal">À propos</h2>
+        <p class="text-body mt-8">
+            Diplômé d’un BPJEPS je mets mes compétences de coaching sportif à votre service
+        </p>
+        <p class="text-body mt-8">
+            Passionné par le sport je fais également du Street-workout depuis plusieurs années
+        </p>
+    </article>
+
+    {{ partial "image" (dict
+        "img" "images/corentin-sw.jpg"
+        "opt" (dict
+        "loading" "normal"
+        "alt" "Corentin Chevalier, coach sportif"
+        "size" "400x"
+        "class" "w-full order-first md:order-last col-span-3 md:col-start-9 xl:col-start-8 md:col-end-13 xl:col-end-12 mb-12 md:md-0"
+        )
+    )}}
+</section>

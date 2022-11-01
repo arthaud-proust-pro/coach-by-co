@@ -1,0 +1,8 @@
+<section id="prestations" class="container mt-32 scroll-mt-24 py-12 grid grid-cols-6 md:grid-cols-12">
+    <h2 class="col-span-full xl:col-start-2 xl:col-end-12 text-h2 text-gold-normal">Prestations</h2>
+    {{ range (where .Site.Pages "Section" "services") }}
+        {{ range .Pages }}
+            {{ .Render "card" }}
+        {{ end }}
+    {{ end }}
+</section>

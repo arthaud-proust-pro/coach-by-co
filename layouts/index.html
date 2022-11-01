@@ -1,72 +1,14 @@
 {{ define "main" }}
 
-<section class="container pt-32 scroll-mt-24 grid grid-cols-6 md:grid-cols-12 items-center">
-    {{ partial "image" (dict
-        "img" "images/corentin.png"
-        "opt" (dict
-            "loading" "normal"
-            "alt" "Corentin Chevalier, coach sportif"
-            "size" "400x"
-            "class" "col-span-3 md:col-span-4 mb-12 md:md-0"
-        )
-    )}}
-    <article class="col-span-full md:col-start-6 md:col-end-12 flex flex-col items-start">
-        <h1 class="text-h1 uppercase">Coach sportif à Bordeaux</h1>
-        <h2 class="text-h3 text-gold-normal mt-1">Musculation, remise en forme</h2>
-        <p class="text-body mt-8">
-            Je t'aide à transformer ton corps et atteindre tes objectifs pour te sentir et vivre sans contrainte.
-        </p>
-        <a href="#contact" class="btn">Prendre contact</a>
-    </article>
-</section>
+{{ partial "sections/hero" . }}
 
-<section id="a-propos" class="bg-black-card md:bg-black-background container mt-32 scroll-mt-24 py-12 grid grid-cols-6 md:grid-cols-12">
-    <article class="col-span-full md:col-start-2 md:col-end-10 lg:col-end-8">
-        <h2 class="text-h2 text-gold-normal">À propos</h2>
-        <p class="text-body mt-8">
-            Diplômé d’un BPJEPS je mets mes compétences de coaching sportif à votre service
-        </p>
-        <p class="text-body mt-8">
-            Passionné par le sport je fais également du Street-workout depuis plusieurs années
-        </p>
-    </article>
-</section>
+{{ partial "sections/about" . }}
 
-<section id="prestations" class="container mt-32 scroll-mt-24 py-12 grid grid-cols-6 md:grid-cols-12">
-    <div class="col-span-full md:col-start-4 lg:col-start-6 md:col-end-12">
-        <h2 class="text-h2 text-gold-normal">Prestations</h2>
-        <article>
-            <h3 class="text-h3 mt-8">Accompagnement personnalisé</h3>
-            <p class="text-body pt-2">
-                Lorem ipsum dolor sit amet conseguir ale desi paragra phe
-                naro ise ipso facto lore. Lorem ipsum dolor sit amet conseguir ale desi paragra phe naro ise ipso facto lore
-            </p>
-        </article>
-        <article>
-            <h3 class="text-h3 mt-8">Devenez massif</h3>
-            <p class="text-body pt-2">
-                Lorem ipsum dolor sit amet conseguir ale desi paragra phe
-                naro ise ipso facto lore. Lorem ipsum dolor sit amet conseguir ale desi paragra phe naro ise ipso facto lore
-            </p>
-        </article>
-    </div>
-</section>
+{{ partial "sections/services" . }}
 
-<section id="contact" class="container mt-32 scroll-mt-24 py-12 mb-24  grid grid-cols-6 md:grid-cols-12">
-    <article  class="col-span-full md:col-start-2 md:col-end-10 lg:col-end-8 flex flex-col items-start">
-        <h2 class="text-h2 text-gold-normal mb-8">Prendre contact</h2>
-        <a class="mb-8 text-h3 block flex flex-row items-center gap-4" href="tel:{{ .Site.Params.phone }}">
-            <img src="/icons/whatsapp.svg" alt="Whatsapp" height="42" width="42"/>
-            <span class="link">{{ .Site.Params.phone }}</span>
-        </a>
-        <a class="mb-8 text-h3 block flex flex-row items-center gap-4" href="#{{ .Site.Params.facebook }}">
-            <img src="/icons/facebook.svg" alt="Facebook" height="42" width="42" />
-            <span class="link">{{ .Site.Params.facebook }}</span>
-        </a>
-        <a class="mb-8 text-h3 block flex flex-row items-center gap-4" href="mail:{{ .Site.Params.email }}">
-            <img src="/icons/email.svg" alt="Email" height="42" width="42"/>
-            <span class="link">{{ .Site.Params.email }}</span>
-        </a>
-    </article>
-</section>
+{{ partial "sections/pricing" . }}
+
+{{ partial "sections/contact" . }}
+
+
 {{ end }}

@@ -1,0 +1,24 @@
+<section id="tarification" class="container mt-32 scroll-mt-24 py-12 grid grid-cols-6 md:grid-cols-12">
+    <div class="col-span-full md:col-start-4 xl:col-start-6 md:col-end-12">
+        <h2 class="text-h2 text-gold-normal">Tarification</h2>
+        <p class="text-body mt-8">
+            Toutes les prestations démarrent avec un bilan suivi d’un abonnement mensuel qui comprend des séances d’une heure.
+        </p>
+        <p class="text-body pt-2">
+            Nous choisissons ensemble le nombre de séances par semaines (1 à 4) après le bilan.
+        </p>
+        {{ $prices := (slice
+            (dict "n" 1 "price" 40)
+            (dict "n" 2 "price" 35)
+            (dict "n" 4 "price" 30)
+        ) }}
+        {{ range $prices}}
+        <article class="mt-8">
+            <h3 class="text-h3">{{ .n }} séance par semaine</h3>
+            <p class="text-body pt-2">{{ .price }}€ par séance</p>
+            {{ $monthPrice := mul 4 (mul .n .price) }}
+            <p class="text-body pt-2">{{ $monthPrice }}€ par mois</p>
+        </article>
+        {{ end }}
+    </div>
+</section>
