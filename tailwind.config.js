@@ -21,6 +21,7 @@ module.exports = {
         'background': '#000F1A',
         'card': '#001624',
         'decoration': '#011C2E',
+        'side': '#00080E',
       },
     },
     fontFamily: {
@@ -33,8 +34,8 @@ module.exports = {
         DEFAULT: '1rem',
         sm: '2rem',
         lg: '4rem',
-        xl: '5rem',
-        '2xl': '6rem',
+        xl: '8rem',
+        '2xl': '16rem',
       },
     },
   },

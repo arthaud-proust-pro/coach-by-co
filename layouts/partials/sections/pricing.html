@@ -1,19 +1,24 @@
-<section id="tarification" class="p-section
-    col-span-full
-    grid-body
-    ">
-    <div class="col-span-full md:col-start-1 md:col-span-5 xl:col-start-2 xl:col-span-5 mb-8 flex flex-col items-start">
-        <h2 class="text-h2 text-gold-normal">Tarification</h2>
-        <p class="text-body mt-8">
-            Toutes les prestations démarrent avec un bilan suivi d’un abonnement mensuel, qui comprend des séances d’une heure.
+<section id="tarifs" class="p-section col-span-full grid-body">
+    <h2 class="col-span-full mb-8 text-h2 text-gold-normal">Tarifs</h2>
+    <div class="col-span-full md:col-start-1 md:col-end-7 mb-8 flex flex-col items-start">
+        <h3 class="text-h3">Bilan préliminaire</h3>
+        <p class="text-body mt-4">
+            Toutes les prestations démarrent avec un bilan à <span class="text-gold-normal">30€</span>.
         </p>
         <p class="text-body mt-2">
-            Nous choisissons ensemble le nombre de séances par semaines après le bilan.
+            J’évalue ton profil pour te proposer un accompagnement en accord avec tes capacités actuelles.
+        </p>
+        <p class="text-body mt-2">
+            Suite à ce bilan, je te propose un abonnement mensuel où nous choisissons ensemble le nombre de séances par semaine.
         </p>
         <a href="#contact" class="btn mt-8">Prendre contact</a>
     </div>
 
-    <div class="col-span-full md:col-start-7 md:col-span-8 xl:col-start-8 xl:col-span-6  space-y-8">
+    <div class="col-span-full md:col-start-7 md:col-end-13">
+        <h3 class="text-h3">Séances hebdomadaires</h3>
+        <p class="text-body mt-4">
+            Abonnement mensuel
+        </p>
         {{ $prices := (slice
         (dict "n" 1 "price" 50)
         (dict "n" 2 "price" 40)

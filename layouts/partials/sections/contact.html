@@ -1,10 +1,8 @@
-<section id="contact" class="p-section relative
-    col-span-full xl:col-start-2
-    flex flex-col items-start">
+<section id="contact" class="p-section relative col-span-full flex flex-col items-start">
     <h2 class="text-h2 text-gold-normal mb-8">Prendre contact</h2>
     {{- range $key, $value := .Site.Params.contact -}}
         {{ partial "contact-link" (dict "key" $key "value" $value) }}
     {{- end -}}
 
-    {{ partial "svg/logo" (dict "class" "absolute text-black-decoration z-[-10] translate-x-1/2 md:translate-x-0 right-[-1rem] md:right-[10%] bottom-0 h-3/4 xl:h-full w-3/4 md:w-auto") }}
+    {{ partial "svg/logo" (dict "class" "absolute text-black-decoration z-[-10] translate-x-1/2 md:translate-x-0 right-[-1rem] md:right-[5%] bottom-0 h-3/4 xl:h-full w-3/4 md:w-auto") }}
 </section>

@@ -6,6 +6,7 @@
 @tailwind variants;
 
 @layer base {
+
     :focus-visible {
         outline: solid theme('colors.gold.hover') 2px;
         outline-offset: 3px;
@@ -13,8 +14,21 @@
 }
 
 @layer components {
+    .bg-gradient {
+        background: theme('colors.black.background');
+        background: linear-gradient(90deg,
+        theme('colors.black.side') 0%,
+        theme('colors.black.background') 15%,
+        theme('colors.black.background') 85%,
+        theme('colors.black.side') 100%
+        );
+    }
+    .bg-body {
+        @apply bg-black-background md:bg-gradient;
+    }
+
     .grid-body {
-        @apply grid grid-cols-6 md:grid-cols-12;
+        @apply grid grid-cols-6 md:grid-cols-12 md:gap-x-12 xl:gap-x-20;
     }
     .p-section {
         @apply scroll-mt-24 py-12;

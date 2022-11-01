@@ -31,9 +31,9 @@ menu:
       pre: prestations
       url: "/#prestations"
       weight: 2
-    - name: Tarification
-      pre: tarification
-      url: "/#tarification"
+    - name: Tarifs
+      pre: tarifs
+      url: "/#tarifs"
       weight: 3
     - name: Contact
       pre: contact

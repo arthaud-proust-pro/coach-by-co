@@ -1,6 +1,6 @@
 ---
-title: Bilan
+title: Bilan préliminaire
 weight: 1
 price: 30€
 ---
-J'évalue ton profil pour te proposer un accompagnement à un certain rythme afin d'atteindre tes objectifs.  
+J'évalue ton profil pour te proposer un accompagnement en accord avec tes capacités actuelles.  

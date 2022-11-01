@@ -1,5 +1,5 @@
 <section id="prestations" class="p-section col-span-full grid-body">
-    <h2 class="col-span-full xl:col-start-2 xl:col-end-12 text-h2 text-gold-normal">Prestations</h2>
+    <h2 class="col-span-full text-h2 text-gold-normal">Prestations</h2>
     {{ range (where .Site.Pages "Section" "services") }}
         {{ range .Pages }}
             {{ .Render "card" }}
