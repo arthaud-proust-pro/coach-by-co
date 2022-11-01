@@ -21,12 +21,7 @@
         (dict "n" 4 "price" 30)
         ) }}
         {{ range $prices}}
-        <article>
-            <h3 class="text-h3">{{ .n }} séance{{if gt .n 1}}s{{end}} / semaine</h3>
-            <p class="text-body pt-2">{{ .price }}€ par séance</p>
-            {{ $monthPrice := mul 4 (mul .n .price) }}
-            <p class="text-body pt-2">{{ $monthPrice }}€ par mois</p>
-        </article>
+            {{ partial "price" . }}
         {{ end }}
     </div>
 </section>

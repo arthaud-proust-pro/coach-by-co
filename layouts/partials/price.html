@@ -1,0 +1,11 @@
+{{ $monthPrice := mul 4 (mul .n .price) }}
+
+<article>
+    <h3 class="text-h3">{{ .n }} séance{{if gt .n 1}}s{{end}} / semaine</h3>
+    <p class="text-body pt-2">
+
+        <span>{{ .price }}€ / séance</span>
+        -
+        <span>{{ $monthPrice }}€ / mois</span>
+    </p>
+</article>
