@@ -19,7 +19,7 @@
     </div>
 
     {{ with .Site.Menus.main }}
-        <div class="w-full flex-grow h-screen flex-col items-center justify-center gap-10 text-h3"
+        <div class="w-full flex-grow h-screen flex-col items-center justify-center gap-10 text-h3 overflow-x-hidden"
              :class="isOpen?'flex':'hidden'">
             {{ range .ByWeight  }}
             <a href="{{ .URL | relURL }}" class="link" @click="closeMenu">{{ .Name }}</a>

@@ -14,13 +14,14 @@
 
     <div class="col-span-full md:col-start-7 md:col-span-8 xl:col-start-8 xl:col-span-6  space-y-8">
         {{ $prices := (slice
-        (dict "n" 1 "price" 40)
-        (dict "n" 2 "price" 35)
+        (dict "n" 1 "price" 50)
+        (dict "n" 2 "price" 40)
+        (dict "n" 3 "price" 35)
         (dict "n" 4 "price" 30)
         ) }}
         {{ range $prices}}
         <article>
-            <h3 class="text-h3">{{ .n }} séance par semaine</h3>
+            <h3 class="text-h3">{{ .n }} séance{{if gt .n 1}}s{{end}} / semaine</h3>
             <p class="text-body pt-2">{{ .price }}€ par séance</p>
             {{ $monthPrice := mul 4 (mul .n .price) }}
             <p class="text-body pt-2">{{ $monthPrice }}€ par mois</p>

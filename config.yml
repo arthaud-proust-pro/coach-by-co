@@ -3,9 +3,10 @@ baseURL: https://coachbyco.netlify.app
 removePathAccents: true
 
 params:
-  email: coachbyco@gmail.com
-  phone: "06 52 98 42 08"
-  facebook: "coachbyco"
+  contact:
+    whatsapp: "06 52 98 42 08"
+    facebook: "coachbyco"
+    email: coachbyco@gmail.com
   seo:
     author: Coach by Co
     title: Coach by Co - Coach sportif à Bordeaux

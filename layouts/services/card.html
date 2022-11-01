@@ -5,12 +5,5 @@
     <h3 class="text-h3 mt-8">{{ .Title }}</h3>
     <div class="text-body mt-2 space-y-2">
         {{ .Content }}
-        <p class="text-gold-normal text-cta">
-            {{ with .Params.Price }}
-                {{ . }}
-            {{ else }}
-                <a href="#tarification" class="link">Voir les tarifs</a>
-            {{ end }}
-        </p>
     </div>
 </article>

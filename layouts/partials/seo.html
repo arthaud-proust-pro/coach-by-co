@@ -9,8 +9,9 @@
 <script type="application/ld+json">
     {{- $sameAs := slice -}}
     {{- range $key, $value := .Site.Params.seo.links -}}
-    {{- $sameAs = $sameAs | append $value -}}
+        {{- $sameAs = $sameAs | append $value -}}
     {{- end -}}
+
     {{ (dict
     "@context" "http://schema.org"
     "@type" "Organization"
