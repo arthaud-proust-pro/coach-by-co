@@ -49,7 +49,7 @@
     }
 
     .btn {
-        @apply text-cta text-gold-normal mt-8 border px-8 py-3 relative transition-colors duration-200;
+        @apply text-cta text-gold-normal border px-8 py-3 relative transition-colors duration-200;
     }
     .btn::after {
         content: '';
