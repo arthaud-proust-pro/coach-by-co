@@ -40,8 +40,8 @@
     {{ end}}
 </head>
 <body class="bg-black-background text-white-normal text-xl">
-    <div class="min-h-screen pb-12">
-        {{- partial "header" . -}}
+    {{- partial "header" . -}}
+    <div class="min-h-screen pb-12 overflow-x-hidden">
 
         <main>
             {{- block "main" . }}{{- end }}
