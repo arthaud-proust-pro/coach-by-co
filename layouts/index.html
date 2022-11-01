@@ -1,14 +1,16 @@
 {{ define "main" }}
 
-{{ partial "sections/hero" . }}
+<div class="container grid-body gap-y-32">
+    {{ partial "sections/hero" . }}
 
-{{ partial "sections/about" . }}
+    {{ partial "sections/about" . }}
 
-{{ partial "sections/services" . }}
+    {{ partial "sections/services" . }}
 
-{{ partial "sections/pricing" . }}
+    {{ partial "sections/pricing" . }}
 
-{{ partial "sections/contact" . }}
+    {{ partial "sections/contact" . }}
 
+</div>
 
 {{ end }}
