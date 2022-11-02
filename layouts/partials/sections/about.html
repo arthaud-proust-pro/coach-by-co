@@ -12,13 +12,25 @@
         </p>
     </article>
 
-    {{ partial "image" (dict
-        "img" "images/corentin-sw.jpg"
-        "opt" (dict
-        "loading" "normal"
-        "alt" "Corentin Chevalier, coach sportif"
-        "size" "400x"
-        "class" "w-full order-first md:order-last col-span-3 md:col-start-8 md:col-end-13 mb-12 md:md-0"
-        )
-    )}}
+    <div class="group order-first md:order-last col-span-3 md:col-start-8 md:col-end-13 mb-12 md:md-0">
+        {{ partial "image" (dict
+            "img" "images/handstand.jpg"
+            "opt" (dict
+                "loading" "normal"
+                "alt" "Corentin Chevalier, coach sportif"
+                "size" "800x"
+                "class" "w-full group-hover:hidden pointer-events-none user-select-none"
+            )
+        )}}
+            {{ partial "image" (dict
+            "img" "images/front-lever.jpg"
+            "opt" (dict
+                "loading" "normal"
+                "alt" "Corentin Chevalier, coach sportif"
+                "size" "800x"
+                "class" "w-full hidden group-hover:block pointer-events-none user-select-none"
+            )
+        )}}
+    </div>
+
 </section>

@@ -1,8 +1,8 @@
 {{ $monthPrice := mul 4 (mul .n .price) }}
 
-<article class="mt-8">
+<article class="mb-8">
     <h4 class="text-h4">
-        {{ .n }} séance{{if gt .n 1}}s{{end}}
+        {{ .n }} séance{{if gt .n 1}}s{{end}} hebdomadaire{{if gt .n 1}}s{{end}}
     </h4>
     <p class="text-body pt-2">
         <span class="text-gold-normal">{{ $monthPrice }}€ / mois</span>

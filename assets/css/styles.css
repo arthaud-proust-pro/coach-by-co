@@ -55,7 +55,7 @@
     }
 
     .text-cta {
-        @apply text-xl font-sans font-bold;
+        @apply text-xl font-sans font-medium;
     }
 
     .text-label {
