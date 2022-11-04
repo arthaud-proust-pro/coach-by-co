@@ -1,5 +1,5 @@
 languageCode: 'fr'
-baseURL: https://coachbyco.netlify.app
+baseURL: https://coachbyco.fr
 removePathAccents: true
 
 params:
@@ -20,7 +20,7 @@ params:
     author: Coach by Co
     title: Coach by Co - Coach sportif à Bordeaux
     desc: "Coach sportif à Bordeaux, je t'aide à transformer ton corps et atteindre tes objectifs pour te sentir mieux et vivre sans contrainte."
-    url: https://coachbyco.netlify.app
+    url: https://coachbyco.fr
     hero: /sprites/hero-min.jpg
     logo: /sprites/logo-min.png
     links:
