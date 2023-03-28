@@ -19,14 +19,9 @@
         <p class="text-body my-4">
             Les prestations sont disponibles en abonnements mensuels. <b class="font-bold">Chaque séance dure 1 heure</b>.
         </p>
-        {{ $prices := (slice
-        (dict "n" 1 "price" 50)
-        (dict "n" 2 "price" 40)
-        (dict "n" 3 "price" 35)
-        (dict "n" 4 "price" 30)
-        ) }}
-        {{ range $prices}}
-            {{ partial "price" . }}
-        {{ end }}
+        {{ partial "price" (dict "n" 1 "price" 160) }}
+        {{ partial "price" (dict "n" 2 "price" 240) }}
+        {{ partial "price" (dict "n" 3 "price" 300) }}
+        {{ partial "price" (dict "n" 4 "price" 350 "andmore" true) }}
     </div>
 </section>
