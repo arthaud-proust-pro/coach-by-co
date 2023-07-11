@@ -1,4 +1,5 @@
 ---
+visibleInCms: true
 title: Perte de poids
 weight: 1
 ---

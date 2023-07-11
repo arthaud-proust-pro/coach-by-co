@@ -9,3 +9,24 @@ slug:
   clean_accents: true
 
 collections:
+  - name: services
+    label: Services
+    label_singular: Service
+    folder: content/services
+    create: true
+    editor: { preview: false }
+    filter: { field: visibleInCms, value: true }
+    fields:
+      - { label: Visible, name: visibleInCms, widget: hidden, default: true }
+      - { label: Titre, name: title }
+      - { label: Prix, name: prix, widget: number }
+      - { label: Description, name: description, widget: markdown, minimal: true, required: false, buttons: [bold, link], editor_components: [], modes: [rich_text] }
+
+  - name: sections
+    label: Sections
+    files:
+     - label: "Instagram"
+       name: "instagram"
+       file: "data/sections/instagram.yml"
+       fields:
+         - { label: "Url publication", name: publication, widget: string }

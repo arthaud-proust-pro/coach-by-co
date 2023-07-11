@@ -1,5 +1,6 @@
 ---
 draft: true
+visibleInCms: true
 title: Bilan préliminaire
 weight: 1
 price: 30€

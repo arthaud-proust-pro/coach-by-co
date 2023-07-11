@@ -1,4 +1,5 @@
 ---
+visibleInCms: true
 title: Remise en forme
 weight: 1
 ---

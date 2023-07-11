@@ -1,4 +1,5 @@
 ---
+visibleInCms: true
 title: Prise de masse
 weight: 1
 ---
