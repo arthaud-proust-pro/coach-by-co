@@ -1,0 +1,20 @@
+isBilanFree: true
+bilanPrice: 0
+hourPrice: 50
+sessionHoursDuration: 1
+sessions:
+  - count: 1
+    countOffered: 1
+    isHighlighted: false
+  - count: 2
+    countOffered: 2
+    isHighlighted: false
+  - count: 3
+    countOffered: 3
+    isHighlighted: true
+  - count: 4
+    countOffered: 4
+    isHighlighted: false
+  - count: 5
+    countOffered: 5
+    isHighlighted: false
