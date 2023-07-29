@@ -21,8 +21,7 @@ collections:
     fields:
       - { label: Visible, name: visibleInCms, widget: hidden, default: true }
       - { label: Titre,  name: title, required: true }
-      - { label: Prix, name: prix, required: false, widget: number, value_type: "float", default: 0 }
-      - { label: Description, name: description, required: false, widget: markdown, minimal: true, buttons: [bold, link], editor_components: [], modes: [rich_text] }
+      - { label: Description, name: body, required: false, widget: markdown, minimal: true, buttons: [bold, link], editor_components: [], modes: [rich_text] }
 
   - name: sections
     label: Sections
