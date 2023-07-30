@@ -2,19 +2,19 @@
 {{ $postUrl := .Site.Data.sections.instagram.publication_url}}
 {{ $url := printf "%s" $iframelyApiKey | printf "%s&api_key=%s" $postUrl | printf "https://iframe.ly/api/oembed?url=%s" }}
 {{ $response := getJSON $url}}
-{{ $thumbnailUrl := $response.thumbnail_url }}
-{{ $thumbnailWidth := $response.thumbnail_width }}
-{{ $thumbnailHeight := $response.thumbnail_height }}
+{{ $thumbnail := resources.GetRemote $response.thumbnail_url }}
 {{ $title := $response.title }}
 {{ $content := index (split $title "on Instagram:") 1}}
 <article class="w-full flex max-md:flex-col gap-y-4 gap-x-8 items-start">
     <a href="{{$postUrl}}" class="w-1/2 h-full">
-        <img src="{{$thumbnailUrl}}"
-             alt="{{ $content }}"
-             class="w-full h-auto aspect-square object-cover"
-             height="{{$thumbnailHeight}}"
-             width="{{$thumbnailWidth}}"
-        />
+        {{ with resources.Copy (printf "images/instagram/%s" $thumbnail) $thumbnail }}
+            <img src="{{.Permalink}}"
+                 alt="{{ $content }}"
+                 class="w-full h-auto aspect-square object-cover"
+                 height="{{.Height}}"
+                 width="{{.Width}}"
+            />
+        {{ end}}
     </a>
     <div class="md:w-1/2 flex flex-col items-start">
         <p class="text-body">{{ $content }}</p>
