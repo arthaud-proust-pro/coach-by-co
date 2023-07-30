@@ -12,7 +12,7 @@
                     Bilan préliminaire
                 </h4>
 
-                <div class="w-full md:w-5/12 lg:w-4/12 xl:w-4/12">
+                <div class="w-full md:w-5/12 xl:w-4/12">
                     <span class="text-h4 text-gold-normal">
                         {{ if eq .Site.Data.sections.pricing.isBilanFree true }}
                             Offert
@@ -35,7 +35,7 @@
                     {{ end }}
                 </h4>
 
-                <div class="w-full md:w-5/12 lg:w-4/12 xl:w-4/12">
+                <div class="w-full md:w-5/12 xl:w-4/12">
                     <span class="text-h4 {{if .isHighlighted}}text-black-background{{else}}text-gold-normal{{end}}">{{ mul (sub ( mul 4 .count) .countOffered ) $baseSessionPrice }}€</span>
                     <span class="text-body">/mois ({{.countOffered}} séance{{if gt .countOffered 1}}s{{end}} offerte{{if gt .countOffered 1}}s{{end}})</span>
                 </div>
