@@ -1,6 +1,8 @@
 backend:
   name: git-gateway
   branch: main
+local_backend:
+  allowed_hosts: ['192.168.1.14']
 media_folder: 'static/media'
 public_folder: '/media'
 locale: fr
@@ -10,17 +12,16 @@ slug:
 
 collections:
   - name: services
-    label: Services
-    label_singular: Service
+    label: Prestations
+    label_singular: Prestation
     folder: content/services
     create: true
     editor: { preview: false }
     filter: { field: visibleInCms, value: true }
     fields:
       - { label: Visible, name: visibleInCms, widget: hidden, default: true }
-      - { label: Titre, name: title }
-      - { label: Prix, name: prix, widget: number }
-      - { label: Description, name: description, widget: markdown, minimal: true, required: false, buttons: [bold, link], editor_components: [], modes: [rich_text] }
+      - { label: Titre,  name: title, required: true }
+      - { label: Description, name: body, required: false, widget: markdown, minimal: true, buttons: [bold, link], editor_components: [], modes: [rich_text] }
 
   - name: sections
     label: Sections
@@ -29,4 +30,17 @@ collections:
        name: "instagram"
        file: "data/sections/instagram.yml"
        fields:
-         - { label: "Url publication", name: publication, widget: string }
+         - { label: "Url publication", name: publication_url, required: true, widget: string }
+     - label: "Tarifs"
+       name: "pricing"
+       file: "data/sections/pricing.yml"
+       fields:
+         - { label: "Bilan gratuit ?", name: isBilanFree, required: true, widget: boolean }
+         - { label: "Tarif bilan (€)", name: bilanPrice, required: true, widget: number, value_type: "float", default: 0 }
+         - { label: "Tarif heure (€)", name: hourPrice, required: true, widget: number, value_type: "float", default: 0 }
+         - { label: "Durée séance (h)", name: sessionHoursDuration, required: true, widget: number, value_type: "float", default: 1 }
+         - { label: "Forfaits", label_singular: "Forfait", name: sessions, widget: list, collapsed: false, summary: 'Forfait {{fields.count}} séances', fields: [
+             { label: "Séances/semaine", name: count, required: true, widget: number, value_type: "float", default: 0 },
+             { label: "Séances offertes/mois", name: countOffered, required: true, widget: number, value_type: "float", default: 0 },
+             { label: "Mis en avant ?", name: isHighlighted, required: true, widget: boolean }
+           ] }

@@ -67,12 +67,9 @@
     }
     .btn::after {
         content: '';
-        @apply block absolute bottom-0 left-0 h-0 w-full bg-gold-normal transition-all delay-300 duration-200 mix-blend-difference;
+        @apply block absolute bottom-0 left-0 h-0 w-full bg-gold-normal transition-all delay-200 duration-200 mix-blend-difference;
     }
-    .btn:hover {
-        @apply border-black-background;
-    }
-    .btn:hover::after {
+    .btn:hover::after, [aria-checked="true"].btn::after {
         @apply h-full bottom-auto top-0;
     }
 
