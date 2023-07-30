@@ -11,6 +11,8 @@ module.exports = {
         'normal': '#FEBD59',
         'hover': '#FEBD59',
         'disabled': '#FFD38E',
+        'gradient-start': '#FEBD59',
+        'gradient-end': '#FEBD59',
       },
       white: {
         'normal': '#F1F1F1',
