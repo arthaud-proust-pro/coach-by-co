@@ -20,6 +20,7 @@ collections:
     filter: { field: visibleInCms, value: true }
     fields:
       - { label: Visible, name: visibleInCms, widget: hidden, default: true }
+      - { label: "Brouillon ?", name: draft, required: true, widget: boolean }
       - { label: Titre,  name: title, required: true }
       - { label: Description, name: body, required: false, widget: markdown, minimal: true, buttons: [bold, link], editor_components: [], modes: [rich_text] }
 
