@@ -1,0 +1,12 @@
+<div class="mt-8 relative col-span-full h-auto md:col-span-6 xl:col-span-4">
+    <figure class="bg-black-card px-6 py-4 rounded-2xl">
+        <blockquote class="text-cta mt-2 space-y-2">
+            {{ .Content }}
+        </blockquote>
+        <figcaption class="mt-4">
+            <h3 class="text-label text-gold-normal">
+                <a href="{{ .Params.source}}" target="_blank" rel="noreferrer">{{ .Title }}</a>
+            </h3>
+        </figcaption>
+    </figure>
+</div>

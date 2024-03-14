@@ -1,0 +1,8 @@
+<section id="testimonies" class="p-section col-span-full grid-body">
+    <h2 class="col-span-full text-h2 text-gold-normal">Ils sont satisfaits</h2>
+    {{ range (where .Site.Pages "Section" "testimonies") }}
+        {{ range .Pages }}
+            {{ .Render "card" }}
+        {{ end }}
+    {{ end }}
+</section>

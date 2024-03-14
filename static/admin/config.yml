@@ -20,9 +20,24 @@ collections:
     filter: { field: visibleInCms, value: true }
     fields:
       - { label: Visible, name: visibleInCms, widget: hidden, default: true }
-      - { label: "Brouillon ?", name: draft, required: true, widget: boolean }
+      - { label: Brouillon, name: draft, required: false, widget: boolean }
       - { label: Titre,  name: title, required: true }
       - { label: Description, name: body, required: false, widget: markdown, minimal: true, buttons: [bold, link], editor_components: [], modes: [rich_text] }
+
+  - name: testimonies
+    label: Témoignages
+    label_singular: Témoignage
+    folder: content/testimonies
+    create: true
+    editor: { preview: false }
+    filter: { field: visibleInCms, value: true }
+    fields:
+      - { label: Visible, name: visibleInCms, widget: hidden, default: true }
+      - { label: Brouillon, name: draft, required: false, widget: boolean }
+      - { label: Ordre,  name: weight, required: true }
+      - { label: Nom,  name: title, required: true }
+      - { label: Témoignage, name: body, required: false, widget: markdown, minimal: true, buttons: [bold, link], editor_components: [], modes: [rich_text] }
+      - { label: Source,  name: source, required: false, hint: "Copiez le lien de partage de l'avis google" }
 
   - name: sections
     label: Sections

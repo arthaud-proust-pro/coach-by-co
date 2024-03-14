@@ -59,7 +59,7 @@
     }
 
     .text-label {
-        @apply text-lg font-sans font-normal;
+        @apply text-lg font-sans font-light;
     }
 
     .btn {
