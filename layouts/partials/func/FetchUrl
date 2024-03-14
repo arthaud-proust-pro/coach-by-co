@@ -1,0 +1,13 @@
+{{ $url := . }}
+{{ $result := false }}
+{{ with resources.GetRemote $url }}
+  {{ with .Err }}
+    {{ warnf "%s" . }}
+    {{ else }}
+    {{ $result = . }}
+  {{ end }}
+{{ else }}
+  {{ errorf "Unable to get remote resource %q" $url }}
+{{ end }}
+
+{{ return $result }}
