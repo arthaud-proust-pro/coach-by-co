@@ -2,7 +2,7 @@
 visibleInCms: true
 draft: false
 weight: "1"
-title: Lionel d'henley in Arden
+title: Lionel
 source: https://g.co/kgs/pYHKQM6
 ---
 Génial, super coach sportif.\
