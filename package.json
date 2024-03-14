@@ -7,7 +7,7 @@
         "tailwind": "npx tailwindcss -i ./assets/css/styles.css -o ./assets/css/output/styles.css --watch",
         "tailwind:build": "npx tailwindcss -i ./assets/css/styles.css -o ./assets/css/output/styles.css --minify",
         "build": "npm run tailwind:build && npm run hugo:build",
-        "cms": "npx netlify-cms-proxy-server"
+        "cms": "npx decap-server"
     },
     "devDependencies": {
         "@fullhuman/postcss-purgecss": "^4.x",
