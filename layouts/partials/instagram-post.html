@@ -10,7 +10,7 @@
         {{if $thumbnail}}
             {{ with resources.Copy (printf "images/instagram/%s" $thumbnail) $thumbnail }}
                 <img src="{{.Permalink}}"
-                    alt="{{ $content }}"
+                    alt=" "
                     class="w-full h-auto aspect-square object-cover"
                     height="{{.Height}}"
                     width="{{.Width}}"
