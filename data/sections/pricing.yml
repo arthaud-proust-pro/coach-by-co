@@ -1,5 +1,7 @@
 isBilanFree: true
 bilanPrice: 0
+isNutritionalMonitoringFree: false
+nutritionalMonitoringPrice: 50
 hourPrice: 50
 sessionHoursDuration: 1
 sessions:
@@ -12,3 +14,4 @@ sessions:
   - count: 5
     countOffered: 5
     isHighlighted: false
+askResumeLink: https://calendly.com/coachbyco/visio-avec-corentin

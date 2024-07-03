@@ -54,6 +54,8 @@ collections:
         fields:
           - { label: "Bilan gratuit ?", name: isBilanFree, required: true, widget: boolean }
           - { label: "Tarif bilan (€)", name: bilanPrice, required: true, widget: number, value_type: "float", default: 0 }
+          - { label: "Suivi alimentaire gratuit ?", name: isNutritionalMonitoringFree, required: true, widget: boolean }
+          - { label: "Tarif suivi alimentaire (€)", name: nutritionalMonitoringPrice, required: true, widget: number, value_type: "float", default: 0 }
           - { label: "Tarif heure (€)", name: hourPrice, required: true, widget: number, value_type: "float", default: 0 }
           - { label: "Durée séance (h)", name: sessionHoursDuration, required: true, widget: number, value_type: "float", default: 1 }
           - { label: "Forfaits", label_singular: "Forfait", name: sessions, widget: list, collapsed: false, summary: 'Forfait {{fields.count}} séances', fields: [
@@ -61,9 +63,4 @@ collections:
               { label: "Séances offertes/mois", name: countOffered, required: true, widget: number, value_type: "float", default: 0 },
               { label: "Mis en avant ?", name: isHighlighted, required: true, widget: boolean }
             ] }
-          - { label: "Lien bouton \"Demander un bilan\"", name: askResumeLink, required: true, widget: string }
-      - label: "Contact"
-        name: "contact"
-        file: "data/sections/contact.yml"
-        fields:
           - { label: "Lien bouton \"Demander un bilan\"", name: askResumeLink, required: true, widget: string }
