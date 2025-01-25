@@ -1,0 +1,10 @@
+baseSessionPrice: 150
+sessions:
+  - count: 1
+    isHighlighted: false
+  - count: 2
+    isHighlighted: false
+  - count: 3
+    isHighlighted: false
+  - count: 4
+    isHighlighted: false

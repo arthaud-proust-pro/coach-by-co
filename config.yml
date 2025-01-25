@@ -32,19 +32,19 @@ taxonomies:
 
 menu:
   main:
-    - name: À propos
-      pre: a-propos
-      url: "/#a-propos"
-      weight: 1
     - name: Prestations
       pre: prestations
       url: "/#prestations"
       weight: 2
-    - name: Tarifs
-      pre: tarifs
-      url: "/#tarifs"
+    - name: À domicile
+      pre: tarifs-a-domicile
+      url: "/#tarifs-a-domicile"
       weight: 3
+    - name: En entreprise
+      pre: tarifs-en-entreprise
+      url: "/#tarifs-en-entreprise"
+      weight: 4
     - name: Contact
       pre: contact
       url: "/#contact"
-      weight: 4
+      weight: 5

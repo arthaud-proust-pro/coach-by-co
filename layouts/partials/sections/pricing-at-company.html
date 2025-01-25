@@ -1,0 +1,54 @@
+{{ $baseSessionPrice := .Site.Data.sections.pricingAtCompany.baseSessionPrice }}
+
+<section id="tarifs-en-entreprise" class="p-section col-span-full grid-body">
+    <h2 class="col-span-full mb-8 text-h2 text-gold-normal">En entreprise</h2>
+    <ul class="flex flex-col gap-2 col-span-full mb-16">
+        {{ range .Site.Data.sections.pricingAtCompany.sessions }}
+        <li>
+            <article class="px-8 py-6 bg-black-card {{if .isHighlighted}}scale-[1.02] text-black-background bg-gradient-to-r from-gold-gradient-start to-gold-gradient-end{{end}} rounded-lg
+                    w-full flex flex-wrap items-center justify-between gap-4"
+            >
+                <h4 class="text-cta flex gap-4 items-center">
+                    {{.count}} séance{{if gt .count 1}}s{{end}}/mois
+                    {{if .isHighlighted}}
+                    <span class="text-label font-normal flex items-center bg-black-card rounded-md px-3 pt-2 pb-1.5 text-gold-normal">Conseillé</span>
+                    {{ end }}
+                </h4>
+
+                <div class="w-full md:w-5/12 xl:w-4/12">
+                    <span class="text-h4 {{if .isHighlighted}}text-black-background{{else}}text-gold-normal{{end}}">{{ mul .count $baseSessionPrice }}€</span>
+                    <span class="text-body">/mois</span>
+                </div>
+            </article>
+        </li>
+        {{ end }}
+    </ul>
+
+    <div class="col-span-full mb-16 md:col-start-1 md:col-end-7 flex flex-col items-start">
+        <h3 class="text-h3 mb-4" id="bilan-details">Un rendez-vous hebdomadaire</h3>
+        <p class="text-body mb-2">
+            <b class="font-bold">1 séance par semaine</b> pour ancrer une habitude sportive.
+        </p>
+    </div>
+
+    <div class="col-span-full mb-16 md:col-start-7 md:col-end-13">
+        <h3 class="text-h3 mb-4" id="bilan-details">Améliorer la cohésion</h3>
+        <p class="text-body mb-2">
+            Des séances de groupes jusqu'à <b class="font-bold">10 participants</b>.
+        </p>
+    </div>
+
+    <div class="col-span-full mb-16 md:col-start-1 md:col-end-7 flex flex-col items-start">
+        <h3 class="text-h3 mb-4" id="bilan-details">Pas de matériel requis</h3>
+        <p class="text-body mb-2">
+            Chaque séance sera composée d'exercices au poids du corps et adaptables à chacun. Les participants peuvent amener un tapis.
+        </p>
+    </div>
+
+    <div class="col-span-full mb-16 md:col-start-7 md:col-end-13">
+        <h3 class="text-h3 mb-4" id="bilan-details">Des séances complètes</h3>
+        <p class="text-body mb-2">
+            Chaque séance dure 45-60 min et travaille plusieurs aspects de la condition physique pour développer une meilleure santé.
+        </p>
+    </div>
+</section>

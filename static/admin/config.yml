@@ -48,9 +48,9 @@ collections:
         file: "data/sections/instagram.yml"
         fields:
           - { label: "Url publication", name: publication_url, required: true, widget: string }
-      - label: "Tarifs"
-        name: "pricing"
-        file: "data/sections/pricing.yml"
+      - label: "Tarifs à domicile"
+        name: "pricingAtHome"
+        file: "data/sections/pricingAtHome.yml"
         fields:
           - { label: "Bilan gratuit ?", name: isBilanFree, required: true, widget: boolean }
           - { label: "Tarif bilan (€)", name: bilanPrice, required: true, widget: number, value_type: "float", default: 0 }
@@ -64,3 +64,12 @@ collections:
               { label: "Mis en avant ?", name: isHighlighted, required: true, widget: boolean }
             ] }
           - { label: "Lien bouton \"Demander un bilan\"", name: askResumeLink, required: true, widget: string }
+      - label: "Tarifs en entreprise"
+        name: "pricingAtCompany"
+        file: "data/sections/pricingAtCompany.yml"
+        fields:
+          - { label: "Tarif séance (€)", name: baseSessionPrice, required: true, widget: number, value_type: "float", default: 0 }
+          - { label: "Forfaits", label_singular: "Forfait", name: sessions, widget: list, collapsed: false, summary: 'Forfait {{fields.count}} semaines', fields: [
+              { label: "Semaines/mois", name: count, required: true, widget: number, value_type: "float", default: 0 },
+              { label: "Mis en avant ?", name: isHighlighted, required: true, widget: boolean }
+            ] }

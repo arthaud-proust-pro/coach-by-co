@@ -1,8 +1,8 @@
-{{ $sessionHoursDuration := .Site.Data.sections.pricing.sessionHoursDuration}}
-{{ $baseSessionPrice := mul $sessionHoursDuration .Site.Data.sections.pricing.hourPrice }}
+{{ $sessionHoursDuration := .Site.Data.sections.pricingAtHome.sessionHoursDuration}}
+{{ $baseSessionPrice := mul $sessionHoursDuration .Site.Data.sections.pricingAtHome.hourPrice }}
 
-<section id="tarifs" class="p-section col-span-full grid-body">
-    <h2 class="col-span-full mb-8 text-h2 text-gold-normal">Tarifs</h2>
+<section id="tarifs-a-domicile" class="p-section col-span-full grid-body">
+    <h2 class="col-span-full mb-8 text-h2 text-gold-normal">À domicile</h2>
     <ul class="flex flex-col gap-2 col-span-full mb-16">
         <li>
             <article class="relative px-8 py-6 bg-black-card rounded-lg w-full flex flex-wrap items-center justify-between gap-4">
@@ -12,10 +12,10 @@
 
                 <div class="w-full md:w-5/12 xl:w-4/12">
                     <span class="text-h4 text-gold-normal">
-                        {{ if eq .Site.Data.sections.pricing.isBilanFree true }}
+                        {{ if eq .Site.Data.sections.pricingAtHome.isBilanFree true }}
                             Offert
                         {{ else }}
-                            {{ .Site.Data.sections.pricing.bilanPrice }}€
+                            {{ .Site.Data.sections.pricingAtHome.bilanPrice }}€
                         {{ end }}
                     </span>
                 </div>
@@ -29,17 +29,17 @@
 
                 <div class="w-full md:w-5/12 xl:w-4/12">
                     <span class="text-h4 text-gold-normal">
-                        {{ if eq .Site.Data.sections.pricing.isNutritionalMonitoringFree true }}
+                        {{ if eq .Site.Data.sections.pricingAtHome.isNutritionalMonitoringFree true }}
                             Offert
                         {{ else }}
-                            {{ .Site.Data.sections.pricing.nutritionalMonitoringPrice }}€
+                            {{ .Site.Data.sections.pricingAtHome.nutritionalMonitoringPrice }}€
                         {{ end }}
                     </span>
                     <span class="text-body">/mois</span>
                 </div>
             </article>
         </li>
-        {{ range .Site.Data.sections.pricing.sessions }}
+        {{ range .Site.Data.sections.pricingAtHome.sessions }}
         <li>
             <article class="px-8 py-6 bg-black-card {{if .isHighlighted}}scale-[1.02] text-black-background bg-gradient-to-r from-gold-gradient-start to-gold-gradient-end{{end}} rounded-lg
                     w-full flex flex-wrap items-center justify-between gap-4"
@@ -64,16 +64,16 @@
         <h3 class="text-h3 mb-4" id="bilan-details">Bilan préliminaire</h3>
         <p class="text-body mb-2">
             Toutes les prestations démarrent avec un bilan
-            {{ if eq .Site.Data.sections.pricing.isBilanFree true }}
+            {{ if eq .Site.Data.sections.pricingAtHome.isBilanFree true }}
                 <span class="font-bold text-gold-normal">offert</span>.
             {{ else }}
-                à <span class="font-bold text-gold-normal">{{ .Site.Data.sections.pricing.bilanPrice }}€</span>.
+                à <span class="font-bold text-gold-normal">{{ .Site.Data.sections.pricingAtHome.bilanPrice }}€</span>.
             {{ end }}
         </p>
         <p class="text-body mb-5">
             J’évalue ton profil pour te proposer un accompagnement en accord avec tes capacités actuelles.
         </p>
-        <a href="{{ .Site.Data.sections.pricing.askResumeLink}}" class="btn">Demander un bilan</a>
+        <a href="{{ .Site.Data.sections.pricingAtHome.askResumeLink}}" class="btn">Demander un bilan</a>
     </div>
 
     <div class="col-span-full md:col-start-7 md:col-end-13">

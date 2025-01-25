@@ -16,6 +16,7 @@ module.exports = {
       },
       white: {
         'normal': '#F1F1F1',
+        'secondary': '#C1C1C1',
         'hover': '#FFFFFF',
         'disabled': '#9B9B9B',
       },
