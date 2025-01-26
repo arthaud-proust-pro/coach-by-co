@@ -69,7 +69,7 @@ collections:
         file: "data/sections/pricingAtCompany.yml"
         fields:
           - { label: "Tarif séance (€)", name: baseSessionPrice, required: true, widget: number, value_type: "float", default: 0 }
-          - { label: "Forfaits", label_singular: "Forfait", name: sessions, widget: list, collapsed: false, summary: 'Forfait {{fields.count}} semaines', fields: [
-              { label: "Semaines/mois", name: count, required: true, widget: number, value_type: "float", default: 0 },
-              { label: "Mis en avant ?", name: isHighlighted, required: true, widget: boolean }
-            ] }
+          - { label: "Minimum de séances", name: min, required: true, widget: number, value_type: "int", default: 1 }
+          - { label: "Granularité (ex: de 1 en 1, de 2 en 2) de séances", name: step, required: true, widget: number, value_type: "int", default: 1 }
+          - { label: "Maximum de séances", hint: "Doit être un multiple de la granularité à partir du minimum.\n Si min = 1 et granularité = 2, max peut être égal à 3 ou 5 ou 7 etc", name: max, required: true, widget: number, value_type: "int", default: 1 }
+          - { label: "Proposition par défaut de séances", name: default, required: true, widget: number, value_type: "int", default: 1 }

@@ -7,6 +7,7 @@ module.exports = {
   ],
   theme: {
     colors: {
+      transparent: 'transparent',
       gold: {
         'normal': '#FEBD59',
         'hover': '#FEBD59',
